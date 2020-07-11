@@ -1,0 +1,10 @@
+<test>
+    <test-case>
+        <q>/start</q>
+        <a state = "/start"/>
+        <q>сыграем в города</q>
+        <a state = "/Cities"/>
+        <q>Я</q>
+        <a state = "/Cities/Player"/>
+    </test-case> 
+</test>   
