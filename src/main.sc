@@ -19,7 +19,16 @@ theme: /
         a: Привет. Со мной вы можете научиться определять птиц по голосу. Я включаю запись, а вы угадываете что это за птица. Начнем?
 
         state: song
-            q: Да 
+            q: * 
+            if: ($parseTree.text == 'нет')
+                go!: No
+                
+            if: ($parseTree.text == 'повтори')
+                a: Включаю еще раз.
+                random:
+                    audio: {{$session.next_bird.link1}}
+                    audio: {{$session.next_bird.link2}}
+           
             script: if ($session.all_birds.length == 1) {
                         $reactions.answer("Больше мне нечего вам загадать. Возвращайтесь позже."); 
                     } else {
@@ -32,12 +41,7 @@ theme: /
                 random:
                     audio: {{$session.next_bird.link1}}
                     audio: {{$session.next_bird.link2}}
-            if: ($parseTree.text == 'повтори')
-                a: Включаю еще раз.
-                random:
-                    audio: {{$session.next_bird.link1}}
-                    audio: {{$session.next_bird.link2}}
-           
+
             
             state: right
                 q: *
