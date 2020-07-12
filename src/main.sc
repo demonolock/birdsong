@@ -27,7 +27,7 @@ theme: /
                         $session.next_bird = $session.all_birds[i];
                         $session.all_birds.splice(i, 1);
                     }
-            if: ($session.all_birds.length != 0)
+            if: ($session.all_birds.length != 1)
                 a: Попробуйте угадать что это за птица.
 
                 random:
