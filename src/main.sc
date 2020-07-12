@@ -53,9 +53,9 @@ theme: /
         state: Stop
             q: $Stop
             a: Было приятно сыграть.
-            go!: /reset
+            go!: /Reset
     
-        state: reset
+        state: Reset
             q!: (reset|* *start)
             script:
                 $session = {}
