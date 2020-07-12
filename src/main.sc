@@ -9,15 +9,12 @@ patterns:
 theme: /
     state: start
         q!: * *start 
-        script: 
-            $session.score=0;
-            $session.all_birds = $Birds;
-
+        a: Birds[0].name
         a: Привет. Со мной ты можешь научиться определять птиц по голосу.
 
         state: song
             q!: *
-            a: {{$session.all_birds[0].link}}
+            a: {{$session.all_birds}}
                 
             audio: https://drive.google.com/file/d/1KtXXC_RBpwB27xC9K_6L3pU0TQ1ee96A/view?usp=sharing
             
