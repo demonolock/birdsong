@@ -14,6 +14,8 @@ theme: /
             for (var i = 1; i < 7; i++) {
                 $session.all_birds.push($Birds[i].value);
             }
+            $session.score=0;
+
         a: Привет. Со мной ты можешь научиться определять птиц по голосу.
 
         state: song
