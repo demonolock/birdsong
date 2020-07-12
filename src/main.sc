@@ -10,7 +10,7 @@ theme: /
     state: start
         q!: * *start 
         
-        a: {{$Birds[1].value}}
+        a: {{$Birds[1].value.name}}
         a: Привет. Со мной ты можешь научиться определять птиц по голосу.
 
         state: song
