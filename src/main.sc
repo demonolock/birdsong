@@ -9,7 +9,7 @@ patterns:
 theme: /
     state: start
         q!: * *start 
-        a: Birds[0]
+        a: {{$Birds[0]}}
         a: Привет. Со мной ты можешь научиться определять птиц по голосу.
 
         state: song
