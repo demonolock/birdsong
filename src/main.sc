@@ -23,11 +23,6 @@ theme: /
             if: ($parseTree.text == 'нет')
                 go!: No
                 
-            if: ($parseTree.text == 'повтори')
-                a: Включаю еще раз.
-                random:
-                    audio: {{$session.next_bird.link1}}
-                    audio: {{$session.next_bird.link2}}
            
             script: if ($session.all_birds.length == 1) {
                         $reactions.answer("Больше мне нечего вам загадать. Возвращайтесь позже."); 
