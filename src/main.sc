@@ -14,7 +14,7 @@ theme: /
             $session.all_birds = $Birds;
 
         a: Привет. Со мной ты можешь научиться определять птиц по голосу.
-        go!: song
+        go!: /song
 
     state: song
         script:
