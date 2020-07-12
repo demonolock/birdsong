@@ -29,7 +29,7 @@ theme: /
                         $session.all_birds.splice(i, 1);
                         $reactions.answer(i); 
                     }
-            if: ($session.all_birds.length > 0)
+            if: ($session.all_birds.length != 0)
                 a: {{$session.all_birds[i].name}}
            
             
