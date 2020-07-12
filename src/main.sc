@@ -28,7 +28,7 @@ theme: /
         audio: $session.next_bird.link
         
         state: right
-            q: $session.next_bird?.name
+            q: * $session.next_bird.name *
             a: Верно, это {{$session.next_bird.name}}. 
             script:
                 $session.score=$session.score + 1;
