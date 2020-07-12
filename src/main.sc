@@ -18,6 +18,7 @@ theme: /
 
         state: song
             q!: *
+            a: Попробуй угадать что это за птица.
             script: if ($session.all_birds.length == 0) {
                         $reactions.answer("Больше мне нечего тебе загадать. Возвращайся позже."); 
                     } else if ($session.all_birds.length == 1) {
