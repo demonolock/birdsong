@@ -22,7 +22,7 @@ theme: /
                         $reactions.answer("Больше мне нечего тебе загадать. Возвращайся позже."); 
                     } else if ($session.all_birds.length == 1) {
                         $session.next_bird = $session.all_birds[1];
-                        $session.all_birds = []
+                        $session.all_birds = [];
                     } else {
                         var i = Math.floor(Math.random()*($session.all_birds.length - 1)) + 1;
                         $session.next_bird = $session.all_birds[i];
