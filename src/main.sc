@@ -80,6 +80,7 @@ theme: /
                 
         state: No
             q: * Нет * 
+            a: Почему?
                 
         state: what
                 q: Что ты умеешь
