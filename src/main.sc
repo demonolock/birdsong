@@ -50,16 +50,16 @@ theme: /
                 q: *
                 a: Неверно
                     
-        state: Stop
-            q: $Stop
-            a: Было приятно сыграть.
-            go!: /Reset
-    
-        state: Reset
-            q!: (reset|* *start)
-            script:
-                $session = {}
-                $client = {}
-                $temp = {}
-                $response = {}
-            go!: /
+    state: Stop
+        q: $Stop
+        a: Было приятно сыграть.
+        go!: /Reset
+
+    state: Reset
+        q!: (reset|* *start)
+        script:
+            $session = {}
+            $client = {}
+            $temp = {}
+            $response = {}
+        go!: /
