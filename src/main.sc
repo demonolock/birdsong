@@ -57,6 +57,7 @@ theme: /
 
             state: Reset
                 q!: (reset|* *start)
+                a: сброс
                 script:
                     $session = {}
                     $client = {}
