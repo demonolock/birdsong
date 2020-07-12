@@ -5,14 +5,13 @@ require: birds.csv
 patterns:
     $Stop = (хватит|перестань|прекрати|закончим|сдаюсь|стоп|пока)
     $Help = (помоги*|помочь|помощь|не знаю|что ты умеешь)
-    $BirdList = (соловей|щегол|вертишейка|ворона|кукушка|курица|сова)
 
 theme: /
     state: start
         q!: * *start 
         script:
             $session.all_birds = []
-            for (var i = 1; i < 8; i++) {
+            for (var i = 1; i < 7; i++) {
                 $session.all_birds.push($Birds[i].value);
             }
         a: Привет. Со мной ты можешь научиться определять птиц по голосу.
