@@ -17,7 +17,7 @@ theme: /
 
         state: song
             q!: *
-            a: {{$session.all_birds[0].name}}
+            a: {{$session.all_birds[0]}}
                 
             audio: https://drive.google.com/file/d/1KtXXC_RBpwB27xC9K_6L3pU0TQ1ee96A/view?usp=sharing
             
