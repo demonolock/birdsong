@@ -35,7 +35,7 @@ theme: /
                 script:
                     $session.score=$session.score + 1;
                     $reactions.answer("Угадано уже '{{$session.score}}' птиц. Молодец!");
-                go: song
+                go!: song
     
             state: Help
                 q: * $Help *
