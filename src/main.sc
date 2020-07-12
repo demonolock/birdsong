@@ -16,6 +16,7 @@ theme: /
         a: Привет. Со мной ты можешь научиться определять птиц по голосу.
 
         state: song
+            q!: *
             script:
                 if ($session.all_birds.length == 0) {
                     $reactions.answer("Больше мне нечего тебе загадать. Возвращайся позже."); 
@@ -42,11 +43,12 @@ theme: /
             
             state: wrong
                 q: *
-                a: Неверно.
+                a: Неверно
                     
             state: Stop
                 q: $Stop
                 a: Было приятно сыграть.
+                go!: /reset
         
             state: reset
                 q!: (reset|* *start)
