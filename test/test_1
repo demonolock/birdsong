@@ -3,12 +3,6 @@
         <q>/start</q>
         <a state = "/start"/>
         <q>привет</q>
-        <a state = "/song"/>
-        <q>непонятное</q>
-        <a state = "/wrong"/>
-        <q>хватит</q>
-        <a state = "/stop"/>
-        <q>привет</q>
-        <a state = "/start"/>
+
     </test-case> 
 </test>   
