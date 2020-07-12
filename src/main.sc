@@ -17,6 +17,7 @@ theme: /
         a: Привет. Со мной ты можешь научиться определять птиц по голосу.
 
         state: song
+            q!: *
             script: if ($session.all_birds.length == 0) {
                         $reactions.answer("Больше мне нечего тебе загадать. Возвращайся позже."); 
                         $session.next_bird.link = "";
@@ -35,7 +36,7 @@ theme: /
                 script:
                     $session.score=$session.score + 1;
                     $reactions.answer("Угадано уже '{{$session.score}}' птиц. Молодец!");
-                go: /song
+                go: song
     
             state: Help
                 q: * $Help *
