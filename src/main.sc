@@ -31,12 +31,13 @@ theme: /
            
             script: if ($session.all_birds.length == 1) {
                         $reactions.answer("Больше мне нечего вам загадать. Возвращайтесь позже."); 
+                        $session.all_birds = []
                     } else {
                         var i = Math.floor(Math.random()*($session.all_birds.length - 1)) + 1;
                         $session.next_bird = $session.all_birds[i];
                         $session.all_birds.splice(i, 1);
                     }
-            if: ($session.all_birds.length != 1)
+            if: ($session.all_birds.length != 0)
                 a: Попробуйте угадать что это за птица.
                 random:
                     audio: {{$session.next_bird.link1}}
