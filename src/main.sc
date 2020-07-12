@@ -21,7 +21,7 @@ theme: /
         state: song
             q!: Да 
             script: if ($session.all_birds.length == 0) {
-                        $reactions.answer("Больше мне нечего тебе загадать. Возвращайся позже."); 
+                        $reactions.answer("Больше мне нечего вам загадать. Возвращайтесь позже."); 
                     } else if ($session.all_birds.length == 1) {
                         $session.next_bird = $session.all_birds[0];
                         $session.all_birds = [];
