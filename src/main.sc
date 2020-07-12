@@ -11,7 +11,7 @@ theme: /
         q!: * *start 
         script:
             $session.all_birds = []
-            for (var i = 1; i < 3; i++) {
+            for (var i = 1; i < 4; i++) {
                 $session.all_birds.push($Birds[i].value);
             }
             $session.score=0;
@@ -22,6 +22,9 @@ theme: /
             q: Да 
             script: if ($session.all_birds.length == 0) {
                         $reactions.answer("Больше мне нечего вам загадать. Возвращайтесь позже."); 
+                    } else if ($session.all_birds.length == 1) {
+                        $session.next_bird = $session.all_birds;
+                        $session.all_birds = [];
                     } else {
                         var i = Math.floor(Math.random()*($session.all_birds.length - 1)) + 1;
                         $session.next_bird = $session.all_birds[i];
@@ -29,6 +32,7 @@ theme: /
                     }
             if: ($session.all_birds.length != 0)
                 a: Попробуйте угадать что это за птица.
+
                 random:
                     audio: {{$session.next_bird.link1}}
                     audio: {{$session.next_bird.link2}}
