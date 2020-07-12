@@ -18,8 +18,8 @@ theme: /
     state: song
         script:
             if ($session.all_birds.length == 0) {
-                $reactions.answer("Больше мне нечего тебе загадать. Возвращайся позже.");} 
-                $session.next_bird.link = ""
+                $reactions.answer("Больше мне нечего тебе загадать. Возвращайся позже."); 
+                $session.next_bird.link = "";
             } else {
                 var i = Math.floor(Math.random()*($session.all_birds.length - 1)) + 1;
                 $session.next_bird = $session.all_birds[i];
