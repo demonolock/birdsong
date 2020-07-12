@@ -29,7 +29,11 @@ theme: /
                     }
             if: ($session.all_birds.length != 1)
                 a: Попробуйте угадать что это за птица.
-
+                random:
+                    audio: {{$session.next_bird.link1}}
+                    audio: {{$session.next_bird.link2}}
+            if: ($parseTree.text == 'повтори')
+                a: Включаю еще раз.
                 random:
                     audio: {{$session.next_bird.link1}}
                     audio: {{$session.next_bird.link2}}
@@ -42,9 +46,9 @@ theme: /
                     script:
                         $session.score=$session.score + 1;
                         $reactions.answer("Получилось узнать уже '{{$session.score}}'. Молодец!");
-                    go: ../song
+                    go!: ../song
                 else:
-                    go: wrong
+                    go!: wrong
     
             state: Help
                 q: * $Help *
