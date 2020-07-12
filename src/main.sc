@@ -36,8 +36,8 @@ theme: /
            
             
             state: right
-                q: $Bird
-                if: ($Bird == $session.next_bird.name)
+                q: *
+                if: ($parseTree.text == $session.next_bird.name)
                     a: Верно, это {{$session.next_bird.name}}. 
                     script:
                         $session.score=$session.score + 1;
