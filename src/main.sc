@@ -1,11 +1,3 @@
-require: birds.csv
-    var = $Birds
-    name = Birds
-    
-patterns:
-    $Stop = (хватит|перестань|прекрати|закончим|сдаюсь|стоп|пока)
-    $Help = (помоги*|помочь|помощь|не знаю)
-
 theme: /
     state: start
         q!: * *start 

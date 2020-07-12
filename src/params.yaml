@@ -1,0 +1,16 @@
+{
+    "catchAll": {
+        "phrases": [
+            "Извините, непонятно"
+        ]
+    },
+    "fulfillment": {
+        "settings": {
+            "default": {
+                "url": ""
+            },
+            "channels": []
+        },
+        "actions": []
+    }
+}
