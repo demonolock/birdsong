@@ -62,4 +62,4 @@ theme: /
                     $client = {}
                     $temp = {}
                     $response = {}
-                go!: ../../
+                go!: ../../start
