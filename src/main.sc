@@ -44,7 +44,7 @@ theme: /
                         $reactions.answer("Угадано уже '{{$session.score}}' птиц. Молодец!");
                     go!: ../
                 else:
-                    go!: wrong
+                    go!: ../wrong
     
             state: Help
                 q: * $Help *
