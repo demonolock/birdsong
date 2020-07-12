@@ -53,7 +53,7 @@ theme: /
             state: Stop
                 q: $Stop
                 a: Было приятно сыграть.
-                go: Reset
+                go: /Reset
 
             state: Reset
                 q!: (reset|* *start)
