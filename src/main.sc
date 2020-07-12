@@ -43,7 +43,7 @@ theme: /
                     a: Верно, это {{$session.next_bird.name}}. 
                     script:
                         $session.score=$session.score + 1;
-                        $reactions.answer("Угадано уже '{{$session.score}}' птиц. Молодец!");
+                        $reactions.answer("Получилось узнать уже '{{$session.score}}'. Молодец!");
                     go!: ../
                 else:
                     go!: ../wrong
