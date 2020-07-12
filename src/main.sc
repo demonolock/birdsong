@@ -36,12 +36,15 @@ theme: /
            
             
             state: right
-                q: * {{$session.next_bird.name}} *
-                a: Верно, это {{$session.next_bird.name}}. 
-                script:
-                    $session.score=$session.score + 1;
-                    $reactions.answer("Угадано уже '{{$session.score}}' птиц. Молодец!");
-                go!: ../
+                q: $bird_name
+                if: ($bird_name == $session.next_bird.name)
+                    a: Верно, это {{$session.next_bird.name}}. 
+                    script:
+                        $session.score=$session.score + 1;
+                        $reactions.answer("Угадано уже '{{$session.score}}' птиц. Молодец!");
+                    go!: ../
+                else:
+                    go!: /wrong
     
             state: Help
                 q: * $Help *
