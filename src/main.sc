@@ -72,6 +72,6 @@ theme: /
                     $temp = {}
                     $response = {}
                 go!: ../../start
-    state: Help
+    state: help
             q: * $Help *
             a: Это навык орнитология. Я могу помочь тебе научиться определять птиц по голосам.
