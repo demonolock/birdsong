@@ -41,7 +41,6 @@ theme: /
                 random:
                     audio: {{$session.next_bird.link1}}
                     audio: {{$session.next_bird.link2}}
-
             
             state: right
                 q: *
@@ -50,7 +49,7 @@ theme: /
                     script:
                         $session.score=$session.score + 1;
                         $reactions.answer("Получилось узнать уже '{{$session.score}}'. Молодец!");
-                    go!: ../
+                    go!: ../song
                 else:
                     go!: wrong
     
