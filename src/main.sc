@@ -49,7 +49,7 @@ theme: /
                     script:
                         $session.score=$session.score + 1;
                         $reactions.answer("Получилось узнать уже '{{$session.score}}'. Молодец!");
-                    go!: ../song
+                    go!: ../
                 else:
                     go!: wrong
     
