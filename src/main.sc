@@ -14,7 +14,6 @@ theme: /
             $session.all_birds = $Birds;
 
         a: Привет. Со мной ты можешь научиться определять птиц по голосу.
-        go: song
 
     state: song
         script:
@@ -34,8 +33,7 @@ theme: /
             script:
                 $session.score=$session.score + 1;
                 $reactions.answer("Угадано уже '{{$session.score}}' птиц. Молодец!");} 
-            go!: song
-        
+
         state: Help
             q: * $Help *
             a: Это {{$session.next_bird.name}}. 
