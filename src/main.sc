@@ -56,7 +56,6 @@ theme: /
     
             
             state: wrong
-                q: *
                 a: Неверно. Включить еще разок?
                 state: Yes
                     q: Да
