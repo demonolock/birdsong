@@ -17,16 +17,8 @@ theme: /
 
         state: song
             q!: *
-            script:
-                if ($session.all_birds.length == 0) {
-                    $reactions.answer("Больше мне нечего тебе загадать. Возвращайся позже."); 
-                    $session.next_bird.link = "";
-                } else {
-                    var i = Math.floor(Math.random()*($session.all_birds.length - 1)) + 1;
-                    $session.next_bird = $session.all_birds[i];
-                    $session.all_birds.splice(i, 1);
-                }
             
+            audio: https://drive.google.com/file/d/1KtXXC_RBpwB27xC9K_6L3pU0TQ1ee96A/view?usp=sharing
             
             state: right
                 q: * соловей *
