@@ -5,14 +5,13 @@ require: birds.csv
 patterns:
     $Stop = (хватит|перестань|прекрати|закончим|сдаюсь|стоп|пока)
     $Help = (помоги*|помочь|помощь|не знаю|что ты умеешь)
-    $BirdList = (ласточка|стриж|курица|сойка|кукушка)
 
 theme: /
     state: start
         q!: * *start 
         script:
             $session.all_birds = []
-            for (var i = 1; i < 2; i++) {
+            for (var i = 1; i < 4; i++) {
                 $session.all_birds.push($Birds[i].value);
             }
             $session.score=0;
