@@ -31,11 +31,12 @@ theme: /
                     }
             if: ($session.all_birds.length != 0)
                 random:
-                    audio: {{$session.next_bird.link}}
+                    audio: {{$session.next_bird.link1}}
+                    audio: {{$session.next_bird.link2}}
            
             
             state: right
-                q: * соловей *
+                q: * {{$session.next_bird.name}} *
                 a: Верно, это {{$session.next_bird.name}}. 
                 script:
                     $session.score=$session.score + 1;
