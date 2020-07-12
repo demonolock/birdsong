@@ -56,10 +56,13 @@ theme: /
             
             state: wrong
                 q: *
-                a: Неверно. Еще разок
-                random:
-                    audio: {{$session.next_bird.link1}}
-                    audio: {{$session.next_bird.link2}}
+                a: Неверно. Еще разок?
+                state: Yes
+                    q: Да
+                    random:
+                        audio: {{$session.next_bird.link1}}
+                        audio: {{$session.next_bird.link2}}
+                
                     
             state: Stop
                 q: $Stop
@@ -75,6 +78,7 @@ theme: /
                     $temp = {}
                     $response = {}
                 go!: ../../start
+                
     state: what
             q: Что ты умеешь
             a: Я могу помочь тебе научиться определять птиц по голосам.
