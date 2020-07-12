@@ -62,6 +62,15 @@ theme: /
                     random:
                         audio: {{$session.next_bird.link1}}
                         audio: {{$session.next_bird.link2}}
+                        
+            state: repeat
+                q: повтори
+                a: Неверно. Включить еще разок?
+                state: Yes
+                    q: Да
+                    random:
+                        audio: {{$session.next_bird.link1}}
+                        audio: {{$session.next_bird.link2}}
                 
             state: Stop
                 q: $Stop
