@@ -62,6 +62,7 @@ theme: /
                     random:
                         audio: {{$session.next_bird.link1}}
                         audio: {{$session.next_bird.link2}}
+                go: ../
                         
             state: repeat
                 q: повтори
@@ -71,6 +72,7 @@ theme: /
                     random:
                         audio: {{$session.next_bird.link1}}
                         audio: {{$session.next_bird.link2}}
+                go: ../
                 
             state: Stop
                 q: $Stop
