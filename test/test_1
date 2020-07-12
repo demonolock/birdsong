@@ -1,8 +1,5 @@
 <test>
     <test-case>
-        <q>/start</q>
-        <a state = "/start"/>
-        <q>привет</q>
-
+       
     </test-case> 
 </test>   
