@@ -5,6 +5,7 @@ require: birds.csv
 patterns:
     $Stop = (хватит|перестань|прекрати|закончим|сдаюсь|стоп|пока)
     $Help = (помоги*|помочь|помощь|не знаю|что ты умеешь)
+    $BirdList = (соловей|щегол|вертишейка|ворона|кукушка|курица|сова)
 
 theme: /
     state: start
@@ -37,8 +38,8 @@ theme: /
            
             
             state: right
-                q: $bird
-                if: ($bird == $session.next_bird.name)
+                q: *
+                if: ($parseTree.text == $session.next_bird.name)
                     a: Верно, это {{$session.next_bird.name}}. 
                     script:
                         $session.score=$session.score + 1;
