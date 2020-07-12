@@ -53,7 +53,10 @@ theme: /
             
             state: wrong
                 q: *
-                a: Неверно
+                a: Неверно. Еще разок
+                random:
+                    audio: {{$session.next_bird.link1}}
+                    audio: {{$session.next_bird.link2}}
                     
             state: Stop
                 q: $Stop
