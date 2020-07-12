@@ -37,7 +37,7 @@ theme: /
            
             
             state: right
-                q: $session.next_bird.name
+                q: {{$session.next_bird.name}}
                 if: ($parseTree.text == $session.next_bird.name)
                     a: Верно, это {{$session.next_bird.name}}. 
                     script:
