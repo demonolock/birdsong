@@ -14,46 +14,45 @@ theme: /
             $session.all_birds = $Birds;
 
         a: Привет. Со мной ты можешь научиться определять птиц по голосу.
-        go!: /song
 
-    state: song
-        script:
-            if ($session.all_birds.length == 0) {
-                $reactions.answer("Больше мне нечего тебе загадать. Возвращайся позже."); 
-                $session.next_bird.link = "";
-            } else {
-                var i = Math.floor(Math.random()*($session.all_birds.length - 1)) + 1;
-                $session.next_bird = $session.all_birds[i];
-                $session.all_birds.splice(i, 1);
-            }
-        audio: https://drive.google.com/file/d/1KtXXC_RBpwB27xC9K_6L3pU0TQ1ee96A/view?usp=sharing
-        
-        state: right
-            q: * соловей *
-            a: Верно, это {{$session.next_bird.name}}. 
+        state: song
             script:
-                $session.score=$session.score + 1;
-                $reactions.answer("Угадано уже '{{$session.score}}' птиц. Молодец!");
-            go: /song
-
-        state: Help
-            q: * $Help *
-            a: Это {{$session.next_bird.name}}. 
-
+                if ($session.all_birds.length == 0) {
+                    $reactions.answer("Больше мне нечего тебе загадать. Возвращайся позже."); 
+                    $session.next_bird.link = "";
+                } else {
+                    var i = Math.floor(Math.random()*($session.all_birds.length - 1)) + 1;
+                    $session.next_bird = $session.all_birds[i];
+                    $session.all_birds.splice(i, 1);
+                }
+            audio: https://drive.google.com/file/d/1KtXXC_RBpwB27xC9K_6L3pU0TQ1ee96A/view?usp=sharing
+            
+            state: right
+                q: * соловей *
+                a: Верно, это {{$session.next_bird.name}}. 
+                script:
+                    $session.score=$session.score + 1;
+                    $reactions.answer("Угадано уже '{{$session.score}}' птиц. Молодец!");
+                go: /song
+    
+            state: Help
+                q: * $Help *
+                a: Это {{$session.next_bird.name}}. 
+    
+            
+            state: wrong
+                q: *
+                a: Неверно.
+                    
+            state: Stop
+                q: $Stop
+                a: Было приятно сыграть.
         
-        state: wrong
-            q: *
-            a: Неверно.
-                
-        state: Stop
-            q: $Stop
-            a: Было приятно сыграть.
-        
-    state: reset
-        q!: (reset|* *start)
-        script:
-            $session = {}
-            $client = {}
-            $temp = {}
-            $response = {}
-        go!: /
+            state: reset
+                q!: (reset|* *start)
+                script:
+                    $session = {}
+                    $client = {}
+                    $temp = {}
+                    $response = {}
+                go!: /
