@@ -79,7 +79,7 @@ theme: /
                 go!: ../../start
                 
         state: No
-            q: * Нет * 
+            q: *
             a: Скажите "да", когда будете готовы.
                 
         state: what
