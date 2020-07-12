@@ -44,7 +44,7 @@ theme: /
                         $reactions.answer("Получилось узнать уже '{{$session.score}}'. Молодец!");
                     go!: ../song
                 else:
-                    go!: /wrong
+                    go!: wrong
     
             state: Help
                 q: * $Help *
