@@ -50,10 +50,10 @@ theme: /
                 q: *
                 a: Неверно
                     
-        state: Stop
-            q: $Stop
-            a: Было приятно сыграть.
-            go!: ../Reset
+            state: Stop
+                q: $Stop
+                a: Было приятно сыграть.
+                go!: ../../Reset
 
     state: Reset
         q!: (reset|* *start)
