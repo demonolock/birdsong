@@ -29,7 +29,6 @@ theme: /
                     }
             if: ($session.all_birds.length != 0)
                 a: Попробуйте угадать что это за птица.
-
                 random:
                     audio: {{$session.next_bird.link1}}
                     audio: {{$session.next_bird.link2}}
