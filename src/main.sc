@@ -26,7 +26,7 @@ theme: /
                         $session.next_bird = $session.all_birds[i];
                         $session.all_birds.splice(i, 1);
                     }
-            a: {{$i}}, {{$session.next_bird.name}}, {{$session.all_birds[i]}}
+            a: {{$i}}
             audio: {{$session.next_bird.link}}
             
             state: right
