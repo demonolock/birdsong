@@ -31,7 +31,7 @@ theme: /
                         $session.all_birds.splice(i, 1);
                     }
             if: ($session.all_birds.length != 0)
-                a: Попробуй угадать что это за птица.
+                a: Попробуйте угадать что это за птица.
 
                 random:
                     audio: {{$session.next_bird.link1}}
