@@ -29,7 +29,8 @@ theme: /
                         $session.all_birds.splice(i, 1);
                         $reactions.answer(i); 
                     }
-            a: {{$session.all_birds.length}}
+            if: ($session.all_birds.length > 0)
+                audio: {{$session.all_birds.link}}
            
             
             state: right
