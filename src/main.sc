@@ -30,7 +30,7 @@ theme: /
                         $reactions.answer(i); 
                     }
             if: ($session.all_birds.length != 0)
-                a: {{$session.next_bird.name}}
+                audio: {{$session.next_bird.link}}
            
             
             state: right
