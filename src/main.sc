@@ -1,4 +1,4 @@
-require: birds.csv
+require: src/birds.csv
     var = $Birds
 
 patterns:
