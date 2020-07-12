@@ -66,7 +66,7 @@ theme: /
             state: repeat
                 q: повтори
                 a: Неверно. Включить еще разок?
-                state: Yes
+                state: Yes_1
                     q: Да
                     random:
                         audio: {{$session.next_bird.link1}}
