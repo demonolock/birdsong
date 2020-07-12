@@ -30,7 +30,7 @@ theme: /
                         $reactions.answer(i); 
                     }
             a: {{$session.all_birds.length}}
-            audio: {{$session.next_bird.link}}
+           
             
             state: right
                 q: * соловей *
