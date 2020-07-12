@@ -25,8 +25,8 @@ theme: /
                         var i = Math.floor(Math.random()*($session.all_birds.length - 1)) + 1;
                         $session.next_bird = $session.all_birds[i];
                         $session.all_birds.splice(i, 1);
+                        $reactions.answer(i); 
                     }
-            a: {{$i}}
             audio: {{$session.next_bird.link}}
             
             state: right
