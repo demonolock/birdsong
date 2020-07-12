@@ -12,8 +12,9 @@ theme: /
         script:
             $session.all_birds = []
             for (var i = 0; i < 3; i++) {
-                $session.all_birds.push($Birds[i].value.name);
+                $session.all_birds.push($Birds[i].value);
             }
+        a: {{$Birds[1].value}}
         a: Привет. Со мной ты можешь научиться определять птиц по голосу.
 
         state: song
