@@ -23,7 +23,7 @@ theme: /
             } else {
                 var i = Math.floor(Math.random()*($session.all_birds.length - 1)) + 1;
                 $session.next_bird = $session.all_birds[i];
-                $session.next_bird.splice(i, 1);
+                $session.all_birds.splice(i, 1);
             }
         audio: $session.next_bird.link
         
