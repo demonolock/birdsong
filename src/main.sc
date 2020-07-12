@@ -21,7 +21,7 @@ theme: /
             script: if ($session.all_birds.length == 0) {
                         $reactions.answer("Больше мне нечего тебе загадать. Возвращайся позже."); 
                     } else if ($session.all_birds.length == 1) {
-                        $session.next_bird = $session.all_birds[1];
+                        $session.next_bird = $session.all_birds[0];
                         $session.all_birds = [];
                     } else {
                         var i = Math.floor(Math.random()*($session.all_birds.length - 1)) + 1;
@@ -49,16 +49,16 @@ theme: /
                 q: *
                 a: Неверно
                     
-            state: Stop
-                q: $Stop
-                a: Было приятно сыграть.
-                go!: reset
-        
-            state: reset
-                q!: (reset|* *start)
-                script:
-                    $session = {}
-                    $client = {}
-                    $temp = {}
-                    $response = {}
-                go!: /
+        state: Stop
+            q: $Stop
+            a: Было приятно сыграть.
+            go!: reset
+    
+        state: reset
+            q!: (reset|* *start)
+            script:
+                $session = {}
+                $client = {}
+                $temp = {}
+                $response = {}
+            go!: /
