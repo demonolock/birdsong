@@ -14,7 +14,7 @@ theme: /
             for (var i = 1; i < 5; i++) {
                 $session.all_birds.push($Birds[i].value);
             }
-        audio:https://drive.google.com/file/d/1Ls3RjzC0a-ZJ4ZJpLZZv-CcRVC22k9uo/preview
+        audio: https://drive.google.com/uc?export=download&id=1h3nHPtQPgNBcVpacaBhO9VUtzndwtGa4
         a: Привет. Со мной ты можешь научиться определять птиц по голосу.
 
         state: song
