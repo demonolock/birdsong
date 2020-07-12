@@ -11,7 +11,7 @@ theme: /
         q!: * *start 
         script:
             $session.all_birds = []
-            for (var i = 1; i < 3; i++) {
+            for (var i = 1; i < 4; i++) {
                 $session.all_birds.push($Birds[i].value);
             }
         a: Привет. Со мной ты можешь научиться определять птиц по голосу.
