@@ -11,7 +11,7 @@ theme: /
         q!: * *start 
         script:
             $session.all_birds = []
-            for (var i = 1; i < 5; i++) {
+            for (var i = 1; i < 6; i++) {
                 $session.all_birds.push($Birds[i].value);
             }
             $session.score=0;
