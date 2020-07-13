@@ -15,7 +15,7 @@ theme: /
                 $session.all_birds.push($Birds[i].value);
             }
             $session.score=0;
-        audio: https://drive.google.com/uc?export=download&id=1czPZR8g3TzWxtK20P-2a6PcOF0HPGGcf
+        audio: https://drive.google.com/uc?export=download&id=14jMOz7mtw2m09zHO-5yx-ODqnBIYA_3S
 
         a: Привет. Со мной вы можете научиться определять птиц по голосу. Я включаю запись, а вы угадываете что это за птица. Начнем?
         
