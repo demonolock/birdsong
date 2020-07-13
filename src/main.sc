@@ -17,7 +17,7 @@ theme: /
             $session.score=0;
 
         a: Привет. Со мной вы можете научиться определять птиц по голосу. Я включаю запись, а вы угадываете что это за птица. Начнем?
-        audio: https://drive.google.com/uc?export=download&id=1h3nHPtQPgNBcVpacaBhO9VUtzndwtGa4
+        
         state: song
             q: * 
             if: ($parseTree.text == 'нет')
