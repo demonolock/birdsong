@@ -17,7 +17,7 @@ theme: /
             $session.score=0;
 
         a: Привет. Со мной вы можете научиться определять птиц по голосу. Я включаю запись, а вы угадываете что это за птица. Начнем?
-        audio: http://kino-server.myjino.ru/mp3/solovey-yuzhnyy-golos-3314-onbird.ru.mp3
+        audio: http://boobooka.com/wp-content/uploads/2013/08/zvuki-lesa-solovey.mp3
         state: song
             q: * 
             if: ($parseTree.text == 'нет')
