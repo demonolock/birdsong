@@ -11,11 +11,10 @@ theme: /
         q!: * *start 
         script:
             $session.all_birds = []
-            for (var i = 1; i < 6; i++) {
+            for (var i = 1; i < 5; i++) {
                 $session.all_birds.push($Birds[i].value);
             }
             $session.score=0;
-        audio: https://drive.google.com/uc?export=download&id=1EJMhxX8aK59IU8pLnFcX1x5Zn_ibbFyx
 
         a: Привет. Со мной вы можете научиться определять птиц по голосу. Я включаю запись, а вы угадываете что это за птица. Начнем?
         
