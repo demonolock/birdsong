@@ -4,7 +4,7 @@ require: birds.csv
     
 patterns:
     $Stop = (хватит|перестань|прекрати|закончим|сдаюсь|стоп|пока)
-    $Help = (помоги*|помочь|помощь|не знаю|что ты умеешь)
+    $Help = (помоги*|помочь|помощь|не знаю)
 
 theme: /
     state: start
@@ -15,6 +15,7 @@ theme: /
                 $session.all_birds.push($Birds[i].value);
             }
             $session.score=0;
+        audio: https://drive.google.com/uc?export=download&id=1czPZR8g3TzWxtK20P-2a6PcOF0HPGGcf
 
         a: Привет. Со мной вы можете научиться определять птиц по голосу. Я включаю запись, а вы угадываете что это за птица. Начнем?
         
