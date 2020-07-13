@@ -17,7 +17,7 @@ theme: /
             $session.score=0;
 
         a: Привет. Со мной вы можете научиться определять птиц по голосу. Я включаю запись, а вы угадываете что это за птица. Начнем?
-        audio: http://boobooka.com/wp-content/uploads/2013/08/zvuki-lesa-solovey.mp3
+        audio: https://drive.google.com/file/d/1h3nHPtQPgNBcVpacaBhO9VUtzndwtGa4/view?usp=sharing
         state: song
             q: * 
             if: ($parseTree.text == 'нет')
